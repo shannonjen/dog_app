@@ -1,0 +1,20 @@
+<h1>New Dog Form</h1>
+<%= form_for @dog do |d| %>
+	<%= d.label :name %>
+	<%= d.text_field :name %>
+	<%= d.label :email %>
+	<%= d.text_field :email %>
+	<%= d.label :password %>
+	<%= d.password_field :password %>
+	<%= d.label :birthday %>
+	<%= d.date_select :birthday %>	
+	<%= d.label :city %>
+	<%= d.text_field :city %>
+	<%= d.label :state %>
+	<%= d.text_field :state %>
+	<%= d.label :newsletter %>
+	<%= d.check_box :newsletter %>
+
+	<%= d.submit %>
+<% end %>
+

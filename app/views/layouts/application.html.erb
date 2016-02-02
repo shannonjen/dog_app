@@ -7,6 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav>
+	<ul>
+	<% if current_dog %>
+		<li>
+			<%=link_to "My Profile", profile_path %>
+		</li>
+		<li>
+			<%=link_to "Log Out", signout_path, method: :delete %>
+		</li>
+	<% else %>
+		<li>
+      <%=link_to "Sign In", signin_path %>
+    </li>
+    <li>
+      <%=link_to "Sign Up", new_dog_path %>
+    </li>
+   <% end %>
+	</ul>
+</nav>
 
 <%= yield %>
 
